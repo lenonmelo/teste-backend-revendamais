@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Library\RetornoMensagem;
 use App\Library\ValidarId;
 use App\Models\Estado;
-use App\Rules\ValidacaoDeFk;
 use App\Rules\validarDelete;
 use Exception;
 use Illuminate\Http\Request;
@@ -85,7 +84,7 @@ class EstadosController extends Controller
     {
         try {
             $existe_id_estado = ValidarId::validar($id, new Estado());
-            
+
             if (!$existe_id_estado) {
                 return response()->json(RetornoMensagem::message('error', 'Não foi encontrado estado com o id enviado'))->setStatusCode(400);
             }
@@ -136,7 +135,7 @@ class EstadosController extends Controller
         //Realiza a validação para ver se o id esta relacionado a algum endereço
         //Pode ser removido se não tiver nenhuma relação
         $validator =  Validator::make($estado->getAttributes(), [
-            'id' => [ new validarDelete('estado_id')],
+            'id' => [new validarDelete('estado_id')],
         ]);
         if ($validator->fails()) {
             return response()->json(RetornoMensagem::message('error', $validator->errors()))->setStatusCode(400);

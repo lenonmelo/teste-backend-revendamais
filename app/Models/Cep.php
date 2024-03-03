@@ -21,7 +21,7 @@ class Cep extends Model
         'cep'
     ];
 
-
+    //Relação com a tabela enderecos
     public function endereco(){
         $this->hasMany(Endereco::class);
     }

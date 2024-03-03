@@ -99,6 +99,7 @@ Após concluir as instalações necessárias, siga estas etapas:
       Authorization:Bearer 8|vhG2Iois6...
 
 * Para acessar os endpoints, a autenticação (Login) deverá ser feita.
+* O tokem irá exporar em 1 hora.
 * Após obter o token, ele deverá ser passado no cabeçalho como um token válido, conforme mostrado acima.
 * Os detalhes dos endpoints estão disponíveis na coleção do Postman no arquivo de apoio.
 * Para acessar, faça o download e importe no Postman.

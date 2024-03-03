@@ -16,7 +16,7 @@ class CidadeServices
     /**
      * Realiza as verificações de existencia da cidade e salva um novo caso não exista.
      *
-     * @param string $bairro NOme do bairro para ser cadastrado.
+     * @param string $cidade Nome da cidade para ser cadastrado.
      * @return Integer
      */
     public function salvarCidade($cidade)

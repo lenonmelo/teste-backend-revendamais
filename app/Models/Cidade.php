@@ -21,6 +21,7 @@ class Cidade extends Model
         'cidade'
     ];
 
+    //Relação com a tabela enderecos
     public function endereco(){
         $this->hasMany(Endereco::class);
     }

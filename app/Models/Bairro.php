@@ -20,6 +20,7 @@ class Bairro extends Model
         'bairro'
     ];
 
+    //Relação com a tabela enderecos
     public function endereco(){
         $this->hasMany(Endereco::class);
     }

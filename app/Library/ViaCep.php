@@ -23,7 +23,6 @@ class ViaCep
         $client = new Client();
         
         $busca_dados_externos = $client->request('GET', "https://viacep.com.br/ws/{$cep}/json/");
-        
         $dados_externos = json_decode($busca_dados_externos->getBody(), true);
 
         //Caso retornar o parâmetro erro, é por que o CEP não existe na base de CEP nacional

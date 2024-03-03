@@ -32,6 +32,14 @@ class RetornoMensagem
         return $resposta;
     }
 
+    /**
+     * Função para formatar e retornar dados de acordo com as colunas especificadas.
+     *
+     * @param array $array_colunas Array contendo as colunas desejadas.
+     * @param mixed $dados Dados a serem formatados.
+     * @param bool $multi Indica se os dados são multi-nível ou não. Por padrão, é falso.
+     * @return array Array formatado com os dados especificados nas colunas.
+     */
     static function retorno(array $array_colunas, $dados, $multi = false)
     {
         $retorno = [];
@@ -54,9 +62,6 @@ class RetornoMensagem
                 }
             }
         }
-
-
-
         return $retorno;
     }
 }

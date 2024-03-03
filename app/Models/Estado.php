@@ -22,6 +22,7 @@ class Estado extends Model
         'sigla'
     ];
 
+    //Relação com a tabela enderecos
     public function endereco(){
         $this->hasMany(Endereco::class);
     }
