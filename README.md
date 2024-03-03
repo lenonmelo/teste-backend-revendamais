@@ -13,17 +13,20 @@ Para o desenvolvimento da aplicação foram utilizadas as seguintes tecnologias 
 * Composer versão 2.6.6;
 * Banco Mysql versão 15.1.
 
-# Decições técnicas
-Durante o desenvolvimento foram tomadas as seguintes decições técnicas.
-* Criado o método para velidação de parâmetros em cada controller para não ter a necessidade de repetilo em cada action.
-* Criada a library RetornoMensagem para tratar mensagens de retornos.
-* Criada a library ValidarId para validar a existencia dos Ids dinamicamente.
-* Criada a library ViaCep para realizar a execução do enpoint do srviço externo e retornar os dados.
-* Criado um alguns arqhivos services para realizar ações referente a validação de bairros, ceps, cidades, estados(UF) com o objetivo de não poluir os models com métodos alem do padrão.
-* Criado regra de validações de CEP para executar no validator do framework.
-* Criado regra de validações de chaves estrangeiras dinãmicas para executar no validator do framework.
-*utilização da biblioteca externa Guzzle para executar a api de busca de endereço por CEP.
-* Foi utilizado o serviço externo viacep.com.br, por ser mais intuitivo de usar e ter uma base de dados mais completa.
+# Decisões Técnicas
+Durante o desenvolvimento, tomei as seguintes decisões técnicas:
+
+* Criei um método para validar parâmetros em cada controller, evitando repetição em cada ação.
+* Implementei a biblioteca RetornoMensagem para formatar mensagens de retorno.
+* Desenvolvi a biblioteca ValidarId para validar dinamicamente a existência de IDs.
+
+* Utilizei a biblioteca ViaCep para executar o endpoint de um serviço externo e retornar os dados.
+Criei alguns arquivos de serviços para validar bairros, CEPs, cidades e estados (UFs), evitando sobrecarregar os models com métodos adicionais.
+
+* Estabeleci regras de validação de CEP para o validador do framework.
+* Implementei regras de validação de chaves estrangeiras dinâmicas para o validador do framework.
+Utilizei a biblioteca externa Guzzle para executar a API de busca de endereço por CEP.
+* Escolhi o serviço externo viacep.com.br pela sua facilidade de uso e pela abrangência da sua base de dados.
 
 # Rodar a aplicação
 Para executar a aplicação, é necessário que o ambiente/máquina tenha as seguintes aplicações instaladas e configuradas:
@@ -86,7 +89,7 @@ Após concluir as instalações necessárias, siga estas etapas:
 
 *Coleção do Postman com os endpoints utilizados na aplicação.
 
-[Postman Collection]()
+[Postman Collection](https://github.com/lenonmelo/teste-backend-revendamais/blob/main/Projeto%20Revenda%20Mais.postman_collection.json)
 
 # Instruções dos endpoints
 
@@ -95,7 +98,7 @@ Após concluir as instalações necessárias, siga estas etapas:
       Accept:application/json
       Authorization:Bearer 8|vhG2Iois6...
 
-* Para acessar os endepoits a autenticação(Login) deverá ser feita.
-* Após ter o token na mão, devera ser passado no cabeçalho o token válido, conforme mostrado acima.
-* Detalhes dos endpoint estão na coleção do Postman no arquivo de apoio.
-* Para acessar, faça o dowload e importe no Postam.
+* Para acessar os endpoints, a autenticação (Login) deverá ser feita.
+* Após obter o token, ele deverá ser passado no cabeçalho como um token válido, conforme mostrado acima.
+* Os detalhes dos endpoints estão disponíveis na coleção do Postman no arquivo de apoio.
+* Para acessar, faça o download e importe no Postman.
