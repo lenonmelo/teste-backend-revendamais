@@ -20,7 +20,7 @@ class AuthController extends Controller
         if (Auth::attempt($data)) {
             return response()->json([
                 'status' => 'Autorizado',
-                'tokken' => $request->user()->createToken('revendamais')->plainTextToken
+                'token' => $request->user()->createToken('revendamais')->plainTextToken
             ])->setStatusCode(200);
         }
 

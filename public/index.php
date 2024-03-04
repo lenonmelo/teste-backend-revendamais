@@ -1,5 +1,16 @@
 <?php
 
+// //Configuração de acesso de CORS
+// header('Access-Control-Allow-Origin: http://localhost:5173');
+// header('Access-Control-Allow-Credentials: true');
+// header('Access-Control-Allow-Headers: Content-Type, Authorization, x-requested-with');
+// header('Content-Type: application/json');
+// header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+// $method = $_SERVER['REQUEST_METHOD'];
+// if($method == "OPTIONS") {
+//     die();
+// }
+
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 

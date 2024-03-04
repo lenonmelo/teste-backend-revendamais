@@ -237,7 +237,7 @@ class EnderecosController extends Controller
 
                 //Caso não existir o CEP na base de dados do viacep, é retornado a mensagem abaixo
                 if (!$endereco_externo) {
-                    return response()->json(RetornoMensagem::message('error', 'Esse cep não existe'));
+                    return response()->json(RetornoMensagem::message('error', 'Esse cep não existe'))->setStatusCode(400);
                 }
 
                 $bairro_service = new BairroServices();
@@ -258,7 +258,7 @@ class EnderecosController extends Controller
                 $enderecos_cep = Endereco::find($id_endereco);
                 $enderecos_cep->load('cep', 'bairro', 'cidade', 'estado');
 
-                return response()->json(RetornoMensagem::retorno(['cep', 'logradouro', 'bairro', 'cidade', 'estado'], $enderecos_cep));
+                return response()->json([RetornoMensagem::retorno(['cep', 'logradouro', 'bairro', 'cidade', 'estado'], $enderecos_cep)]);
             }
             $enderecos_cep = Endereco::where("cep_id", $cep_id_local)->get();
             $enderecos_cep->load('cep', 'bairro', 'cidade', 'estado');
@@ -307,7 +307,7 @@ class EnderecosController extends Controller
                     $query->where('enderecos.logradouro', 'like', "%$endereco%")
                         ->orWhere('b.bairro', 'like', "%$endereco%")
                         ->orWhere('cid.cidade', 'like', "%$endereco%")
-                        ->orWhere('est.estado', 'like', "$endereco%")
+                        ->orWhere('est.estado', 'like', "%$endereco%")
                         ->orWhere('est.sigla', 'like', "%$endereco%");
                 })->get();
 

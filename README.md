@@ -9,7 +9,8 @@ E por fim realizar uma busca fuxxy search, aonde irá encontrar resultado aproci
 Para o desenvolvimento da aplicação foram utilizadas as seguintes tecnologias web.
 * PHP versão 8.2.12;
 * Framework Laravel versão 10.10;
-* Biblioteca guzzlehttp: Versão 7.8;
+* Biblioteca guzzlehttp versão 7.8;
+* Autenticação com a bibliteca Sanctum versão 3.3;
 * Composer versão 2.6.6;
 * Banco Mysql versão 15.1.
 
