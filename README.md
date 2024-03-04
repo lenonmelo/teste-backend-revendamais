@@ -62,7 +62,7 @@ Após concluir as instalações necessárias, siga estas etapas:
 * Neste momento, o Artisan irá perguntar se deseja criar a base de dados; certifique-se de aceitar essa opção.
 * Agora, o banco de dados será criado automaticamente, e as migrações serão executadas automaticamente.
 
-* Além disso, execute o seguinte comando para executar a seed, que incluirá os dados do usuário admin na tabela de usuários.
+* Além disso, execute o seguinte comando para executar a seed, que incluirá os dados do usuário admin na tabela de usuários e alguns edereços nas tabelas ceps, bairros, cidades e estados(UF).
 
       php artisan db:seed
 
